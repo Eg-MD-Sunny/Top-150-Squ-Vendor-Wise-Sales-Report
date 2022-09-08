@@ -18,9 +18,6 @@ group by t.ProductVariantId
 ) a on a.poid=po.id
 
 
-
-
-
 --2nd Part
 --=========================================
 Select top 150 pv.id [PVID],
