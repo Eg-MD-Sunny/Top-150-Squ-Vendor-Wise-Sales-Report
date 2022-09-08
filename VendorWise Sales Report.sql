@@ -23,5 +23,5 @@
  
  group by Datepart(Month,(dbo.toBdt(Shipment.ReconciledOn))),
           Datename(Month,(dbo.toBdt(Shipment.ReconciledOn))),
-        ProductVariant.id ,
-        ProductVariant.name 
+          ProductVariant.id,
+          ProductVariant.name 
