@@ -9,14 +9,13 @@ join vendor v on v.id=po.vendorid
 Join (   
 		Select t.ProductVariantId pvid,
 		       max(po.id) poid
-			   
+
 	    from thing t 
 		join PurchaseOrder po on po.id=t.PurchaseOrderId
 		join vendor v on v.id=po.vendorid 
-
 		where v.id not in (468,362,103)
-
 		group by t.ProductVariantId
+
 ) a on a.poid=po.id
 
 
