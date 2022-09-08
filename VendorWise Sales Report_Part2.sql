@@ -7,7 +7,9 @@ Select a.pvid,
 From PurchaseOrder po
 join vendor v on v.id=po.vendorid 
 Join (   
-		Select t.ProductVariantId pvid, max(po.id) poid
+		Select t.ProductVariantId pvid,
+		       max(po.id) poid
+			   
 	    from thing t 
 		join PurchaseOrder po on po.id=t.PurchaseOrderId
 		join vendor v on v.id=po.vendorid 
